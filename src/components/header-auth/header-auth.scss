@@ -1,0 +1,20 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.header-auth {
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: rem(132);
+
+        @media (max-width: $bp992) {
+            min-height: rem(100);
+        }
+
+        @media (max-width: $bp480) {
+            min-height: rem(76);
+        }
+    }
+}

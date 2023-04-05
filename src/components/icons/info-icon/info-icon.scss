@@ -1,0 +1,16 @@
+@import '../../../scss/variables.scss';
+
+.info-icon {
+    display: inline-block;
+
+    svg {
+        stroke: $purple;
+        transition: stroke linear 0.3s;
+    }
+
+    &:hover {
+        svg {
+            stroke: $purpleHover;
+        }
+    }
+}

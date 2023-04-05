@@ -1,0 +1,22 @@
+@import '../../../scss/variables.scss';
+
+.delete-icon {
+    cursor: pointer;
+
+    path[id=path-1] {
+        opacity: 0.4;
+        fill: $red;
+        transition: all linear 0.3s;
+    }
+
+    path[id=path-2] {
+        fill: $red
+    }
+
+    &:hover {
+        path[id=path-1] {
+            opacity: 1;
+            fill: $red;
+        }
+    }
+}

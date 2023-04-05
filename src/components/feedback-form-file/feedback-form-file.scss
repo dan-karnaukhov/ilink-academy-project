@@ -1,0 +1,42 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.feedback-form-file {
+    display: inline-flex;
+    align-items: center;
+    padding: rem(14) rem(12);
+    margin: rem(12) 0 rem(12) 0;
+    background-color: $lightGrey2;
+
+    @media (max-width: $bp320) {
+        display: flex;
+        margin: rem(16) 0 0 0;
+    }
+
+    &__status {
+        display: flex;
+        flex-direction: column;
+        margin: 0 rem(16) 0 rem(12);
+
+        @media (max-width: em(540)) {
+            flex: 1 1 auto;
+        }
+
+    }
+
+    &__file-name {
+        font-weight: 600;
+        font-size: rem(14);
+        line-height: 130%;
+        margin: 0 0 rem(4) 0;
+
+        &_error {
+            color: $red;
+        }
+    }
+
+    &__progress {
+        font-weight: 600;
+        font-size: rem(14);
+    }
+}

@@ -1,0 +1,18 @@
+@import '../../../scss/mixins.scss';
+@import '../../../scss/variables.scss';
+
+.social-icon {
+    display: inline-block;
+
+    svg {
+        width: rem(24);
+        height: rem(24);
+        fill: $purple;
+        vertical-align: bottom;
+        transition: fill 0.3s ease 0s;
+
+        &:hover {
+            fill: $purpleHover;
+        }
+    }
+}

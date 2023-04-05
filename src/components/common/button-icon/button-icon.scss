@@ -1,0 +1,30 @@
+@import '../../../scss/mixins.scss';
+
+.button-icon {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        margin: 0 rem(10) 0 0;
+
+        &_hidden {
+            display: none;
+        }
+    }
+
+    @media (max-width: em(540)) {
+        justify-content: center;
+        height: rem(36);
+        width: rem(36);
+        padding: 0;
+
+        &__icon {
+            display: block;
+            margin: 0;
+        }
+
+        &__text {
+            display: none;
+        }
+    }
+}

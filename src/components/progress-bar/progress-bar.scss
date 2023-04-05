@@ -1,0 +1,21 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.progressbar {
+    width: 100%;
+    height: rem(4);
+    border-radius: rem(2);
+    background-color: $whiteButtonsHover;
+
+    &_error {
+        div {
+            background-color: $red !important;
+        }
+    }
+
+    div {
+        background-color: $purple;
+        border-radius: rem(2);
+        height: 100%;
+    }
+}

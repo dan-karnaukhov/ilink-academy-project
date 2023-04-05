@@ -1,0 +1,63 @@
+@import '../../../scss/mixins.scss';
+@import '../../../scss//variables.scss';
+
+.email-field {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: 1.43;
+        margin: 0 0 rem(4) 0;
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid $purple;
+        border-radius: rem(2);
+        padding: rem(15) rem(12);
+        font-size: rem(14);
+        line-height: 1.57;
+
+        box-shadow: inset 0 0 0 rem(50) $white;
+        color: $mainText;
+
+        &:placeholder-shown {
+            border: 1px solid $lightGrey;
+        }
+
+        &::placeholder {
+            color: $grey;
+            font-weight: 400;
+            font-size: rem(14);
+            line-height: 1.57;
+        }
+
+        &:focus {
+            border: 1px solid $purple;
+        }
+
+        &_error {
+            border: 1px solid $red !important;
+        }
+    }
+
+    &__input-container {
+        position: relative;
+    }
+
+    &__info-square {
+        text-align: justify;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin: 0 rem(12) 0 0;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+}

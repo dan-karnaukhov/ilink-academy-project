@@ -1,0 +1,44 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.auth-page {
+    flex: 1 1 auto;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 510px;
+        left: 49%;
+        transform: translate(-50%, -50%);
+        width: 1689px;
+        height: 872px;
+        
+        background-image: url('../../assets/decor-horizontal.svg');
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    &__container {
+        margin: 0 rem(16) rem(90) rem(16);
+    }
+
+    &__form {
+        margin: 0 auto;
+    }
+
+    &__error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        min-height: 62px;
+        background-color: $red;
+        color: $white;
+        font-weight: 500;
+        font-size: rem(16);
+        line-height: 1.38;
+    }
+}

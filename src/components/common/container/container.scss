@@ -1,0 +1,21 @@
+@import '../../../scss/mixins.scss';
+@import '../../../scss/variables.scss';
+
+.container {
+    max-width: rem(1278);
+    padding: 0 rem(15);
+    box-sizing: content-box;
+    margin: 0 auto;
+
+    @media (max-width: $bp1200) {
+        max-width: rem(970);
+    }
+
+    @media (max-width: $bp992) {
+        max-width: rem(750);
+    }
+
+    @media (max-width: $bp768) {
+        max-width: none;
+    }
+}

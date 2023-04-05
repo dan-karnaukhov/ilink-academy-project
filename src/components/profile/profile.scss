@@ -1,0 +1,28 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.profile {
+    display: flex;
+    align-items: center;
+
+    &__name {
+        font-weight: 700;
+        color: $mainText;
+        padding: 0 0 0 1.1em;
+
+        @media (max-width: $bp768) {
+            font-size: rem(15);
+            padding: 0 0 0 rem(8);
+        }
+
+        @media (max-width: $bp320) {
+            font-size: rem(12);
+        }
+    }
+
+    &__last-name {
+        @media (max-width: em(540)) {
+            display: none;
+        }
+    }
+}

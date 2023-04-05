@@ -1,0 +1,19 @@
+@import './reset';
+@import './fonts.scss';
+@import './variables.scss';
+
+body {
+    font-size: rem(18);
+    font-family: $primaryFontFamily;
+    color: $mainText;
+    background-color: $purple;
+    line-height: 1;
+
+    @media (max-width: $bp992) {
+        font-size: rem(14);
+    }
+
+    @media (max-width: $bp320) {
+        font-size: rem(12);
+    }
+}

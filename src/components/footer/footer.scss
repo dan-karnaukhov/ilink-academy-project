@@ -1,0 +1,41 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.footer {
+    background-color: $lightGrey2;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: rem(64);
+        
+        @media (max-width: em(580)) {
+            min-height: rem(84);
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__copyright {
+        font-size: rem(16);
+        color: $grey;
+        line-height: 1.25;
+        font-weight: 500;
+
+        @media (max-width: em(580)) {
+            padding: 0 0 rem(12) 0;
+        }
+
+        @media (max-width: $bp480) {
+            font-family: $secondaryFontFamily;
+            color: $mainText;
+            font-size: rem(12);
+            font-weight: 400;
+        }
+    }
+
+    &__social-icon:not(:last-child) {
+        margin: 0 rem(16) 0 0;
+    }
+}

@@ -1,0 +1,67 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.slick-prev,
+.slick-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(56);
+    height: rem(56);
+    border-radius: rem(2);
+    border: 0;
+    cursor: pointer;
+    background: $white;
+    transition: all linear 0.4s;
+    z-index: 5;
+
+    svg {
+        transition: all linear 0.2s;
+    }
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background: $white;
+
+    svg {
+        stroke: $purple;
+    }
+}
+
+.slick-prev, .slick-prev:focus,
+.slick-next, .slick-next:focus {
+    background: $white;
+
+    svg {
+        stroke: $mainText;
+    }
+}
+
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+.slick-disabled, .slick-disabled:focus, .slick-disabled:hover {
+    background: $lightGrey;
+    cursor: auto;
+
+    svg {
+        stroke: $grey;
+    }
+}
+
+.slick-prev {
+    position: absolute;
+    top: 100%;
+    right: rem(72);
+    left: auto;
+    transform: translateY(-100%);
+}
+
+.slick-next {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: translateY(-100%);
+}

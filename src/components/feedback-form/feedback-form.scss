@@ -1,0 +1,146 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.feedback-form {
+    padding: rem(24);
+    background-color: $white;
+    max-width: rem(676);
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: em(650)) {
+            flex-direction: column;
+        }
+
+        &:first-child {
+            @media (max-width: em(650)) {
+                flex-direction: row;
+            }
+        }
+
+        &:last-child {
+            margin: 0;
+            padding: rem(40) 0 0 0;
+            flex-wrap: wrap-reverse;
+
+            @media (max-width: em(650)) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__error {
+        display: block;
+        font-weight: 500;
+        font-size: rem(16);
+        color: #EB5757;
+        padding: rem(5) 0 0 0;
+    }
+
+    &__upload-img {
+        position: relative;
+        align-self: flex-start;
+
+        input[type=file] {
+            opacity: 0;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            visibility: hidden;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: 1.17;
+        letter-spacing: -0.0124em;
+    }
+
+    &__close-icon {
+        cursor: pointer;
+    }
+
+    &__upload-img-btn {
+        align-self: flex-start;
+    }
+
+    label {
+        display: block;
+        font-weight: 500;
+        font-size: rem(16);
+    }
+
+    input, textarea {
+        border: 1px solid $lightGrey;
+        font-size: rem(14);
+
+        &::placeholder {
+            color: $grey;
+        }
+    }
+
+    label[for=name] {
+        margin: rem(20) 0 rem(14) 0;
+    }
+
+    input[id=name] {
+        flex: 1 1 auto;
+        align-self: stretch;
+        margin: 0 rem(16) 0 0;
+        padding: rem(15) rem(12);
+    }
+
+    label[for=feedback] {
+        padding: rem(20) 0 rem(12) 0;
+    }
+
+    textarea[id=feedback] {
+        resize: none;
+        width: 100%;
+        height: rem(105);
+        padding: rem(12);
+    }
+
+    &__textarea {
+        position: relative;
+
+        div {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: rem(10);
+            line-height: 1.4;
+            color: #8A8A8A;
+            padding:rem(4);
+        }
+    }
+
+    &__submit-btn {
+        margin: 0 rem(16) 0 0;
+
+        @media (max-width: em(540)) {
+            margin: rem(12) rem(16) 0 0;
+        }
+
+        @media (max-width: $bp320) {
+            margin-right: 0;
+            flex: 1 1 auto;
+        }
+    }
+
+    &__moderation {
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+        font-size: rem(12);
+        color: $grey;
+
+        span {
+            margin: 0 0 0 rem(8);
+        }
+    }
+}

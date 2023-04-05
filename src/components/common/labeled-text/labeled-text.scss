@@ -1,0 +1,16 @@
+.labeled-text {
+    letter-spacing: 0.01em;
+    line-height: 1.25;
+
+    &_italic {
+        font-style: italic;
+    }
+
+    &__label {
+        font-weight: 700;
+
+        &_regular {
+            font-weight: 400;
+        }
+    }
+}

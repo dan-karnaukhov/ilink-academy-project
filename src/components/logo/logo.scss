@@ -1,0 +1,20 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.logo {
+    display: inline-block;
+
+    &__svg {
+        fill: $purple;
+        vertical-align: bottom;
+
+        @media (max-width: $bp480) {
+            width: rem(59);
+            height: rem(36);
+        }
+
+        &_light {
+            fill: $white;
+        }
+    }
+}

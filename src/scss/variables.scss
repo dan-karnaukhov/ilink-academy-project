@@ -1,0 +1,21 @@
+@import './mixins.scss';
+
+$mainText: #333333;
+$white: #FFFFFF;
+$grey: #8A8A8A;
+$lightGrey: #E0E0E0;
+$lightGrey2: #F5F5F5;
+$purple: #585CC6;
+$purpleHover: #797DDF;
+$whiteButtonsHover: #C2C4FF;
+$red: #EB5757;
+$redHover: #FB8F8F;
+
+$primaryFontFamily: 'Gilroy';
+$secondaryFontFamily: 'Factor A';
+
+$bp1200: em(1199.98);
+$bp992: em(991.98);
+$bp768: em(767.98);
+$bp480: em(479.98);
+$bp320: em(320);

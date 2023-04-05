@@ -1,0 +1,15 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.avatar {
+
+    &__img {
+        height: rem(52);
+        width: rem(52);
+
+        @media (max-width: $bp480) {
+            height: rem(36);
+            width: rem(36);
+        }
+    }
+}

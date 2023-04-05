@@ -1,0 +1,85 @@
+@import '../../scss/variables';
+
+.feedback-slider {
+    padding: 0 rem(218) rem(64) 0;
+
+    @media (max-width: $bp992) {
+        padding: 0 rem(45) rem(55) 0;
+    }
+
+    @media (max-width: $bp320) {
+        padding: 0 rem(17) rem(58) 0;
+    }
+}
+
+//-----------------Одинаковая высота слайдов-----------------
+
+.slick-track {
+    display: flex !important;
+}
+
+.slick-slide {
+    height: inherit !important;
+}
+
+.slick-slide > div {
+    display: flex;
+    height: 100%;
+}
+
+//-----------------Отступы между слайдами-----------------
+
+.slick-slide {
+    margin: 0 rem(12);
+}
+
+.slick-list {
+    margin: 0 rem(-12);
+}
+
+//-----------------Пагинация-----------------
+
+.slick-dots {
+    margin: rem(14) 0 0 0;
+    bottom: auto;
+    padding: 0 rem(218) 0 0;
+
+    @media (max-width: $bp992) {
+        padding: 0 rem(45) 0 0;
+    }
+
+    @media (max-width: $bp320) {
+        padding: 0 rem(17) 0 0;
+    }
+}
+
+.slick-dots li {
+    height: auto;
+    width: auto;
+    margin: 0 rem(8) 0 0;
+    transition: all linear 0.4s;
+}
+
+.slick-dots li:last-child {
+    margin: 0;
+}
+
+.slick-dots li.slick-active button {
+    background-color: $purple;
+    width: rem(32);
+    height: rem(4);
+    opacity: 1;
+}
+
+.slick-dots li button {
+    background-color: $purple;
+    opacity: 0.25;
+    width: rem(16);
+    height: rem(4);
+    padding: 0;
+    transition: all linear 0.3s;
+}
+
+.slick-dots li button::before {
+    display: none;
+}

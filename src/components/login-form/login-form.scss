@@ -1,0 +1,88 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.login-form {
+    max-width: rem(628);
+    background-color: $white;
+    padding: rem(40) rem(40) rem(24) rem(40);
+
+    @media (max-width: $bp480) {
+        padding: rem(16);
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(32);
+        font-family: $secondaryFontFamily;
+        margin: 0 0 rem(32) 0;
+        text-align: center;
+
+        @media (max-width: $bp480) {
+            font-size: rem(24);
+            margin: 0 0 rem(24) 0;
+        }
+    }
+
+    &__login {
+        margin: 0 0 rem(32) 0;
+    }
+
+    &__password {
+        margin: 0 0 rem(40) 0;
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto;
+
+        @media (max-width: $bp480) {
+            width: 100%;
+        }
+    }
+
+    &__reset-password {
+        text-align: center;
+        cursor: pointer;
+        margin: rem(16) 0 0 0;
+        font-weight: 500;
+        font-size: rem(12);
+        line-height: 1.33;
+        color: $purple;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+
+        & > *:not(:last-child) {
+            margin: 0 rem(12) 0 0;
+
+            @media (max-width: $bp480) {
+                margin: 0 0 rem(15) 0;
+            }
+        }
+
+        @media (max-width: $bp480) {
+            flex-direction: column;
+        }
+    }
+
+    &__reset-password-step {
+        position: relative;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: rem(4);
+        left: 0;
+        cursor: pointer;
+
+        @media (max-width: $bp480) {
+            top: rem(0);
+        }
+    }
+}

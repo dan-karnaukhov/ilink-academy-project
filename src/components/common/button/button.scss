@@ -1,0 +1,69 @@
+@import '../../../scss/mixins.scss';
+@import '../../../scss/variables.scss';
+
+.button {
+    padding: 0.94em 1.56em;
+    background-color: $purple;
+    color: $white;
+    border-radius: rem(2);
+    font-size: inherit;
+    font-weight: 600;
+    transition: background-color linear 0.3s;
+    line-height: 1;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: $bp992) {
+        font-size: rem(18);
+    }
+
+    @media (max-width: $bp480) {
+        font-size: rem(14);
+    }
+
+    &_light {
+        background-color: $white;
+        border: 1px solid $purple;
+        color: $purple;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        right: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: #696DC8;
+        transition: all 0.35s;
+    }
+
+    &:hover::before {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    &_light::before {
+        background: $purple;
+        opacity: 0.1;
+    }
+
+    &:active::before {
+        background-color: $purpleHover;
+    }
+
+    &_light:active::before {
+        background: #C2C4FF;
+    }
+
+    &:disabled {
+        background-color: $grey;
+        pointer-events: none;
+    }
+}

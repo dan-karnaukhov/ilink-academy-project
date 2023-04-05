@@ -1,0 +1,27 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.header {
+    padding: rem(32) 0;
+    background-color: $white;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: $bp992) {
+        padding: rem(22) 0;
+    }
+
+    &__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
